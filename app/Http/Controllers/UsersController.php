@@ -23,10 +23,12 @@ class UsersController extends Controller
      */
     public function index(Request $request)
     {
-        $users = User::latest()->get();
+		
+        $users = User::latest()->get(); //Ci torna gli utenti in ordine cronologico
+/*		
 		if ($request->ajax() || $request->wantsJson()) {
     		return new JsonResponse($users);
-    	}
+    	}*/
 		return view('users.index', compact('users'));
     }
 

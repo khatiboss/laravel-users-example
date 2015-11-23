@@ -4,7 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Article extends Model
+class Article extends Model 
 {
-    
+     
+	 protected $table = 'articles';
+	     protected $fillable = ['title', 'post', 'published_at'];
+
+	
 }

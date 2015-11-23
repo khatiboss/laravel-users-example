@@ -11,10 +11,13 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
+		
+		for($i=0;$i<5;$i++){
     	$user = new App\User();
-    	$user->name = 'Corso Mobile';
-    	$user->email = 'corso@mobile.it';
-    	$user->password = bcrypt('password');
+    	$user->name = "Corso Mobile$i";
+    	$user->email = "corso@mobile.it$i";
+    	$user->password = "password$i";
     	$user->save();
+		}
     }
 }

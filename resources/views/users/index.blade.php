@@ -7,7 +7,21 @@ Index
 @section('content')
 <h1>Users</h1>
 @if (count($users))
-<ul>
+	
+<table border="1">
+<center>
+<tr>
+<td>ID</td><td>Email</td><td>Password</td>
+</tr>
+@foreach ($users as $user)
+<tr>
+<h2><a href="{{action('UsersController@show', [$user->id])}}">{{$user->name}}</a><h2>
+<td>{{$user->id}}</td><td>{{$user->email}}</td><td>{{$user->password}}</td>
+</tr>
+@endforeach
+</center>
+</table>
+<!--ul>
 	@foreach ($users as $user)
 		<user>
 			<h2><a href="{{action('UsersController@show', [$user->id])}}">{{$user->name}}</a><h2>
@@ -18,7 +32,7 @@ Index
 			</ul>
 		</user>
 	@endforeach
-</ul>
+</ul-->
 @else
 <p>no users</p>
 @endif
