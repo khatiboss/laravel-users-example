@@ -3,23 +3,23 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
-class DatabaseSeeder extends Seeder
-{
+class DatabaseSeeder extends Seeder {
+
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run()
-    {
+    public function run() {
         Model::unguard();
 
         // Clean up
-        DB::table('users')->delete();
-		
-		// Seed
-        $this->call(UsersSeeder::class);
+        
+        DB::table('articles')->delete();
+        // Seed
+        $this->call(ArticlesSeeder::class);
 
         Model::reguard();
     }
+
 }

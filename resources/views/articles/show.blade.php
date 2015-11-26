@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-{{$article->name}}
+{{$article->id}}
 @stop
 
 @section('content')

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class UsersSeeder extends Seeder {
+class ArticlesSeeder extends Seeder {
 
     /**
      * Run the database seeds.
@@ -10,12 +10,11 @@ class UsersSeeder extends Seeder {
      * @return void
      */
     public function run() {
-
         for ($i = 0; $i < 5; $i++) {
-            $user = new App\User();
-            $user->name = "Corso Mobile$i";
-            $user->email = "corso@mobile.it$i";
-            $user->password = bcrypt("password$i");
+            $user = new App\Article();
+            $user->title = "Titolo_$i";
+            $user->post = "Descrizione_$i";
+            $user->published_at = Carbon\Carbon::now();
             $user->save();
         }
     }

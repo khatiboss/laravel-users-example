@@ -8,7 +8,11 @@
 </div>
 <div class="form-group">
 	{!! Form::label('published_at', 'Data Publicazione') !!}
-	{!! Form::Date('published_at', null, ['class' => 'form-control']) !!}
+	@if ($create)
+	{!! Form::Date('published_at', Carbon\Carbon::now(), ['class' => 'form-control']) !!}
+	@else
+	{!! Form::Date('published_at', null, ['class' => 'form-control', 'readonly' => true]) !!}
+	@endif
 </div>
 <div class="form-group">
 	{!! Form::submit($submitButtonText, ['class' => 'btn btn-primary form-control']) !!}
