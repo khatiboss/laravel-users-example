@@ -19,8 +19,8 @@
         <td colspan="2">
             {!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('articles.destroy', $article->id))) !!}
             <a href="{{ route('articles.show', [$article->id]) }}"></a>
-            {!! link_to_route('articles.edit', 'Edit', array($article->id), array('class' => 'btn btn-info')) !!}
-            {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}
+            {!! link_to_route('articles.edit', 'Modifica', array($article->id), array('class' => 'btn btn-info')) !!}
+            {!! Form::submit('Cancella', array('class' => 'btn btn-danger')) !!}
             {!! Form::close() !!}
         </td>
     </tr>
@@ -28,7 +28,7 @@
 
 </table>
 @else
-<p>no Articles</p>
+<p>Nessun Articolo</p>
 @endif 
 
 <br><br>
