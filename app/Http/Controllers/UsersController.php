@@ -24,7 +24,7 @@ class UsersController extends Controller
     public function index(Request $request)
     {
 		
-        $users = User::latest()->get(); //Ci torna gli utenti in ordine cronologico
+        $users = User::latest()->get(); //Ci torna gli utenti in ordine cronologico secondo data di creazione
 /*		
 		if ($request->ajax() || $request->wantsJson()) {
     		return new JsonResponse($users);

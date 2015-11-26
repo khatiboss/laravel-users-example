@@ -37,5 +37,5 @@ Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 
-//Article
-Route::resource('articles', 'ArticleController');
+//Articles ressource
+Route::resource('articles', 'ArticlesController');

@@ -16,7 +16,7 @@ class UsersSeeder extends Seeder
     	$user = new App\User();
     	$user->name = "Corso Mobile$i";
     	$user->email = "corso@mobile.it$i";
-    	$user->password = "password$i";
+    	$user->password = bcrypt("password$i");
     	$user->save();
 		}
     }

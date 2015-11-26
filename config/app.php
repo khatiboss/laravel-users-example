@@ -136,6 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+    		
 
         /*
          * Application Service Providers...
@@ -146,6 +147,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 		Laracasts\Flash\FlashServiceProvider::class,
 		Collective\Html\HtmlServiceProvider::class,
+    	'Barryvdh\Debugbar\ServiceProvider',
 
     ],
 
@@ -198,7 +200,7 @@ return [
 		'Flash'		=> Laracasts\Flash\Flash::class,
 		'Form'		=> Collective\Html\FormFacade::class,
 		'Html' 		=> Collective\Html\HtmlFacade::class,
-
+    	'Debugbar' => 'Barryvdh\Debugbar\Facade',
     ],
 
 ];

@@ -1,26 +1,26 @@
-@extends('app')
-
-@section('title')
-Index
-@stop
-
-@section('content')
+@extends('app') @section('title') Index @stop @section('content')
 <h1>Users</h1>
 @if (count($users))
-	
-<table border="1">
-<center>
-<tr>
-<td>ID</td><td>Email</td><td>Password</td>
-</tr>
-@foreach ($users as $user)
-<tr>
-<h2><a href="{{action('UsersController@show', [$user->id])}}">{{$user->name}}</a><h2>
-<td>{{$user->id}}</td><td>{{$user->email}}</td><td>{{$user->password}}</td>
-</tr>
-@endforeach
-</center>
+
+<table border="1" width="50%">
+
+	<tr>
+		<td>ID</td>
+		<td>Nome</td>
+		<td>Email</td>
+		<td>Password</td>
+	</tr>
+	@foreach ($users as $user)
+	<tr>
+		<td>{{$user->id}}</td>
+		<td><a href="{{action('UsersController@show', [$user->id])}}">{{$user->name}}</a></td>
+		<td>{{$user->email}}</td>
+		<td>{{$user->password}}</td>
+	</tr>
+	@endforeach
+
 </table>
+
 <!--ul>
 	@foreach ($users as $user)
 		<user>
@@ -35,6 +35,4 @@ Index
 </ul-->
 @else
 <p>no users</p>
-@endif
-
-@stop
+@endif @stop
