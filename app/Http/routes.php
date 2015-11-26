@@ -39,3 +39,4 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 //Articles ressource
 Route::resource('articles', 'ArticlesController');
+
